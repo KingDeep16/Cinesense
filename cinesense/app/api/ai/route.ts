@@ -9,8 +9,7 @@ export async function POST(request: Request) {
     const { title, rating, description, releaseYear } = await request.json();
 
     // Using 1.5 Flash for high-speed, low-latency responses
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const prompt = `
       You are an elite, witty, and slightly snarky movie critic for CineSense AI.
       Analyze the movie: "${title}" (${releaseYear}).
