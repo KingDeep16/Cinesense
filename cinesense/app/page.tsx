@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase';
 export default async function Home() {
   // Fetch movies from our Supabase table
   const { data: movies, error } = await supabase
-    .from('movies')
+    .from('Movies')
     .select('*')
     .limit(12); // Let's just grab the first 12 for now
 
